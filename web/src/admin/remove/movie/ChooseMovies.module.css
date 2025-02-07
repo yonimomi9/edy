@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.label {
+  font-size: 18px;
+  color: #e50914; /* Netflix red */
+  font-weight: bold;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #e50914;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.8);
+}
+
+.movieList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px; /* Increased height for better visibility */
+  overflow-y: auto; /* Scrollable area for long lists */
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom scrollbar styling */
+.movieList::-webkit-scrollbar {
+  width: 8px;
+}
+.movieList::-webkit-scrollbar-thumb {
+  background: #e50914; /* Netflix red */
+  border-radius: 4px;
+}
+.movieList::-webkit-scrollbar-thumb:hover {
+  background: #b20710; /* Darker red on hover */
+}
+.movieList::-webkit-scrollbar-track {
+  background: #1c1c1c; /* Match the background */
+}
+
+.movieItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #1c1c1c;
+  color: white;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.movieItem.selected {
+  background-color: #e50914;
+  color: white;
+}
+
+
+.movieItem:hover {
+  background-color: #e50914;
+  color: white;
+}
+
+.noResults {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.selectedMovies {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+
+/* Loading message styling */
+.loadingMessage {
+  font-size: 16px;
+  color: #e50914; /* Netflix red */
+  text-align: center;
+  font-weight: bold;
+  animation: fadeInOut 1.5s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+.logoContainer {
+  display: flex;
+  align-items: center; /* Center vertically */
+  height: 100%; /* Match Navbar height */
+}
+
+.logo {
+  height: 100%; /* Scale with Navbar */
+  max-height: 50px; /* Maintain consistent size */
+  width: auto; /* Keep aspect ratio */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+/* Ensure Logo visibility for light and dark themes */
+[data-theme="light"] .logo {
+  filter: brightness(1);
+}
+
+[data-theme="dark"] .logo {
+  filter: brightness(1.5); /* Brighten for dark backgrounds */
+}

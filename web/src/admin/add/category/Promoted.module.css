@@ -1,0 +1,31 @@
+.selectorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the entire section */
+  gap: 10px;
+}
+
+.label {
+  font-size: 18px;
+  color: #e50914; /* Netflix red */
+  font-weight: bold;
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: center; /* Center the radio buttons horizontally */
+  gap: 20px; /* Spacing between Yes and No */
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center; /* Align radio button and text vertically */
+  gap: 5px; /* Space between radio button and text */
+  font-size: 16px;
+  color: white; /* Ensure text color is visible */
+}
+
+input[type="radio"] {
+  margin: 0; /* Remove any default margin */
+}

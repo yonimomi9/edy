@@ -1,0 +1,112 @@
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align all items to the left */
+  padding: 10px 20px;
+  background-color: var(--menu-background-color, #403434);
+  border-bottom: 2px solid #ff0000;
+}
+
+/* Logo Container */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add space between the logo and Admin Panel */
+}
+
+/* Navbar Links */
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Spacing between buttons */
+}
+
+/* Navbar Link */
+.navLink {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ffb7b7;
+  background-color: rgba(255, 77, 77, 0.1);
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu Container */
+.menuContainer {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: var(--menu-background-color, #403434);
+  color: #ffffff;
+  border: 1px solid rgba(255, 77, 77, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Remove extra padding */
+  width: 150px;
+  display: none; /* Default state is hidden */
+  flex-direction: column; /* Ensure items stack vertically */
+}
+
+/* Menu Item */
+.menuItem {
+  padding: 10px 15px; /* Add consistent spacing */
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  display: block; /* Ensure full width for each item */
+  transition: background-color 0.3s ease;
+  text-align: left; /* Align text to the left */
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 77, 77, 0.2);
+  border-radius: 0; /* Remove rounded corners on hover for cleaner look */
+}
+
+/* Show menu when active */
+.menuVisible {
+  display: flex; /* Display as flex to enable vertical stacking */
+}
+
+
+/* Home Button */
+.homeButtonContainer {
+  margin-left: auto;
+}
+
+.homeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: #333333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.1);
+}

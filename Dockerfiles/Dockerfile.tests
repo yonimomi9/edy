@@ -1,0 +1,23 @@
+FROM gcc:latest
+
+# Install CMake
+RUN apt-get update && apt-get install -y cmake
+# Copy the content of the current directory to the container
+COPY . /usr/src/netflix_project
+# Set the working directory
+WORKDIR /usr/src/netflix_project
+
+
+
+# Create the data directory for the database file
+RUN mkdir -p /usr/src/netflix_project/data
+
+# Create build directory and set the working directory
+RUN mkdir build
+WORKDIR /usr/src/netflix_project/build
+
+# Run cmake and make
+RUN cmake /usr/src/netflix_project/recommendServer && make
+
+# Run the tests by executing the Google Test binary
+CMD ["./tests/runTests", "/usr/src/netflix_project/data/database.txt"]

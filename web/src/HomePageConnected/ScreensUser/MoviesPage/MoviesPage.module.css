@@ -1,0 +1,146 @@
+.moviesPage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.previewContainer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.previewContainer .previewMovie {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: start;
+  justify-content: left;
+}
+
+.selectedCategoryTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.noMoviesMessage {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/* Button Styling */
+.categoriesButton {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 11;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #e50914, #b20710);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+}
+
+.categoriesButton:hover {
+  background: linear-gradient(45deg, #b20710, #e50914);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Categories Menu Styling */
+.categoriesMenu {
+  position: absolute;
+  top: 140px;
+  left: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  max-width: 450px;
+  width: auto;
+  max-height: 300px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Visible Menu */
+.categoriesMenuVisible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Category Items */
+.categoryItem {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  background-color: var(--menu-item-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease, color 0.3s ease-in-out;
+}
+
+.categoryItem:hover {
+  background-color: var(--menu-item-hover-bg);
+  color: #ffffff; /* Ensure text turns white on hover */
+  transform: scale(1.05);
+  background-color: #c2060f;
+}
+
+/* Dark Theme Support */
+:root[data-theme='dark'] {
+  --background-color: #2b2b2b;
+  --text-color: #ffffff;
+  --menu-item-bg: #3c3c3c;
+  --menu-item-hover-bg: #e50914;
+  --menu-item-hover-text: #ffffff;
+}
+
+/* Light Theme Support */
+:root[data-theme='light'] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --menu-item-bg: #ffffff;
+  --menu-item-hover-bg: #e50914;
+  --menu-item-hover-text: #ffffff; /* White text on hover in light mode */
+}

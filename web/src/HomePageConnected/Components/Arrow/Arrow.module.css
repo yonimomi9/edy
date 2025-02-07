@@ -1,0 +1,50 @@
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: var(--arrow-bg-color, #e50914); /* Default to Netflix red */
+    color: var(--arrow-text-color, white); /* Default to white */
+    border: none;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 px 9px rgba(0, 0, 0, 0.4);
+  }
+  
+  .arrow:hover {
+    background: var(--arrow-hover-bg-color, #b20710); /* Default hover color */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .left {
+    left: -40px;
+  }
+  
+  .right {
+    right: -40px;
+  }
+  
+  /* Light Theme */
+  [data-theme="light"] .arrow {
+    background: #f5f5f5; /* Light gray */
+    color: #333; /* Dark text */
+  }
+  
+  [data-theme="light"] .arrow:hover {
+    background: #e0e0e0; /* Slightly darker gray on hover */
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] .arrow {
+    background: #222; /* Dark gray */
+    color: #f5f5f5; /* Light text */
+  }
+  
+  [data-theme="dark"] .arrow:hover {
+    background: #444; /* Slightly lighter gray on hover */
+  }
+  

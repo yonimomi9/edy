@@ -1,0 +1,31 @@
+.searchPage {
+    padding: 60px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+  }
+  
+  .resultsHeader {
+    text-align: left;
+    margin-top: 40px; /* Add space from the navbar */
+    margin-bottom: 20px; /* Add spacing between header and results */
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .moviesContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 movies per row */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .noResults {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-color, #aaa);
+  }
+  

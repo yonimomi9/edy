@@ -1,0 +1,183 @@
+[
+    {
+      "_id": { "$oid": "67a5ed821a3b09fed03d2d53" },
+      "title": "Burger King",
+      "categories": ["Fun", "Funny"],
+      "filePath": "/movies/burger.mp4",
+      "thumbnailPath": "/thumbnails/burger_thumbnail.png",
+      "id": 1,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd01" },
+      "title": "Kid Play",
+      "categories": ["Fun", "Nature", "Funny"],
+      "filePath": "/movies/kid_play.mp4",
+      "thumbnailPath": "/thumbnails/kid_play_thumbnail.png",
+      "id": 2,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd02" },
+      "title": "Football",
+      "categories": ["Sports"],
+      "filePath": "/movies/football.mp4",
+      "thumbnailPath": "/thumbnails/football_thumbnail.png",
+      "id": 3,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd03" },
+      "title": "Rainy Window",
+      "categories": ["Sad", "Nature"],
+      "filePath": "/movies/window_rain.mp4",
+      "thumbnailPath": "/thumbnails/window_rain_thumbnail.png",
+      "id": 4,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd04" },
+      "title": "City Life",
+      "categories": ["Intelligence"],
+      "filePath": "/movies/city.mp4",
+      "thumbnailPath": "/thumbnails/city_thumbnail.png",
+      "id": 5,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd05" },
+      "title": "Code",
+      "categories": ["Intelligence", "Funny"],
+      "filePath": "/movies/code.mp4",
+      "thumbnailPath": "/thumbnails/code_thumbnail.png",
+      "id": 6,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd06" },
+      "title": "Grass",
+      "categories": ["Nature"],
+      "filePath": "/movies/grass.mp4",
+      "thumbnailPath": "/thumbnails/grass_thumbnail.png",
+      "id": 7,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd07" },
+      "title": "Chess",
+      "categories": ["Intelligence"],
+      "filePath": "/movies/chess.mp4",
+      "thumbnailPath": "/thumbnails/chess_thumbnail.png",
+      "id": 8,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd08" },
+      "title": "Basketball",
+      "categories": ["Sports", "Funny"],
+      "filePath": "/movies/basketball.mp4",
+      "thumbnailPath": "/thumbnails/basketball_thumbnail.png",
+      "id": 9,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd09" },
+      "title": "Angry",
+      "categories": ["Tension"],
+      "filePath": "/movies/angry.mp4",
+      "thumbnailPath": "/thumbnails/angry_thumbnail.png",
+      "id": 10,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd10" },
+      "title": "Write",
+      "categories": ["Intelligence"],
+      "filePath": "/movies/write.mp4",
+      "thumbnailPath": "/thumbnails/write_thumbnail.png",
+      "id": 11,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd11" },
+      "title": "Snow",
+      "categories": ["Nature"],
+      "filePath": "/movies/snow.mp4",
+      "thumbnailPath": "/thumbnails/snow_thumbnail.png",
+      "id": 12,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd12" },
+      "title": "Sky",
+      "categories": ["Nature"],
+      "filePath": "/movies/sky.mp4",
+      "thumbnailPath": "/thumbnails/sky_thumbnail.png",
+      "id": 13,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd13" },
+      "title": "Run",
+      "categories": ["Sports"],
+      "filePath": "/movies/run.mp4",
+      "thumbnailPath": "/thumbnails/run_thumbnail.png",
+      "id": 14,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd14" },
+      "title": "Ocean",
+      "categories": ["Nature"],
+      "filePath": "/movies/ocean.mp4",
+      "thumbnailPath": "/thumbnails/ocean_thumbnail.png",
+      "id": 15,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd15" },
+      "title": "Mountain",
+      "categories": ["Nature"],
+      "filePath": "/movies/mountain.mp4",
+      "thumbnailPath": "/thumbnails/mountain_thumbnail.png",
+      "id": 16,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd16" },
+      "title": "Minecraft",
+      "categories": ["Fun", "Funny"],
+      "filePath": "/movies/minecraft.mp4",
+      "thumbnailPath": "/thumbnails/minecraft_thumbnail.png",
+      "id": 17,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd17" },
+      "title": "Math",
+      "categories": ["Intelligence"],
+      "filePath": "/movies/math.mp4",
+      "thumbnailPath": "/thumbnails/math_thumbnail.png",
+      "id": 18,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd18" },
+      "title": "Car Ride",
+      "categories": ["Fun", "Sports", "Funny"],
+      "filePath": "/movies/car.mp4",
+      "thumbnailPath": "/thumbnails/car_thumbnail.png",
+      "id": 19,
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "67b0ed001234567890abcd19" },
+      "title": "Epic Sunset",
+      "categories": ["Nature", "Tension"],
+      "filePath": "/movies/epic_sunset.mp4",
+      "thumbnailPath": "/thumbnails/epic_sunset_thumbnail.png",
+      "id": 20,
+      "__v": 0
+    }
+  ]
+  

@@ -1,0 +1,31 @@
+/* Common Button Styles */
+.button {
+    display: inline-block;
+    background: linear-gradient(45deg, #e50914, #b00710); /* Gradient Netflix red */
+    color: #ffffff;
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 24px; /* Larger padding for better click area */
+    border-radius: 50px; /* Fully rounded buttons */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    margin: 20px; /* Adds space around buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #f40612, #e50914); /* Lighter gradient on hover */
+    transform: scale(1.1); /* Slight scale effect */
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.8);
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: row; /* Buttons side-by-side */
+    align-items: center;
+    justify-content: center; /* Center horizontally and vertically */
+    margin-top: 40px; /* Space between title and buttons */
+    height: 100vh; /* Ensures full screen height for centering */
+}

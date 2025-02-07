@@ -1,0 +1,127 @@
+:root {
+  /* Light Theme Variables */
+  --background-gradient-start: rgba(255, 255, 255, 0.8);
+  --background-gradient-end: rgba(240, 240, 240, 1);
+  --overlay-gradient-start: rgba(255, 255, 255, 0.5);
+  --overlay-gradient-end: rgba(255, 255, 255, 0.8);
+  --text-color: #333;
+  --button-bg: #e50914;
+  --button-bg-hover: #b00610;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Variables */
+  --background-gradient-start: rgba(0, 0, 0, 0.8);
+  --background-gradient-end: rgba(0, 0, 0, 1);
+  --overlay-gradient-start: rgba(0, 0, 0, 0.5);
+  --overlay-gradient-end: rgba(0, 0, 0, 0.8);
+  --text-color: white;
+  --button-bg: #e50914;
+  --button-bg-hover: #b00610;
+}
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-start),
+    var(--background-gradient-end)
+  );
+}
+
+/* Subtle zoom-in animation for the video */
+.previewVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1); /* Initial scale */
+  transition: transform 1.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.previewVideo:hover {
+  transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+/* Dynamic gradient background with transition effect */
+.previewOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--overlay-gradient-start),
+    var(--overlay-gradient-end)
+  );
+  z-index: 1;
+  opacity: 1;
+  transition: background 1s ease-in-out; /* Smooth background transition */
+}
+
+/* Slide-up animation for content */
+.previewContent {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  z-index: 2;
+  color: var(--text-color);
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: slideUp 1.5s forwards 0.5s; /* Slide up and appear after delay */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation for the title */
+.previewTitle {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+  text-align: left;
+  color: var(--text-color);
+  animation: fadeInText 1.5s ease-in-out forwards 0.7s;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Button container and styles */
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.previewButton {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: var(--button-bg);
+  color: white;
+}
+
+.previewButton:hover {
+  transform: scale(1.1);
+  background-color: var(--button-bg-hover);
+}

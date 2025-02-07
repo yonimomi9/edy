@@ -1,0 +1,115 @@
+.previewContainer {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  /* Subtle zoom-in animation for the video */
+  .previewVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1); /* Initial scale */
+    transition: transform 1.5s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  .previewVideo:hover {
+    transform: scale(1.1); /* Slight zoom-in on hover */
+  }
+  
+  /* Dynamic gradient background with transition effect */
+  .previewOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      var(--overlay-gradient-start),
+      var(--overlay-gradient-end)
+    );
+    z-index: 1;
+    opacity: 1; /* Ensure it is visible */
+    transition: background 1s ease-in-out; /* Smooth background transition */
+  }
+  
+  .previewContent {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    z-index: 2;
+    color: white;
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: slideUp 1.5s forwards 0.5s; /* Slide up and appear after delay */
+  }
+  
+  /* Slide-up animation for the content */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .previewTitle {
+    font-size: 2rem;
+    margin: 0 0 10px;
+    text-align: left;
+    color: var(--text-color);
+    animation: fadeInText 1.5s ease-in-out forwards 0.7s; /* Text fade-in */
+  }
+  
+  /* Fade-in animation for the title */
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .buttonsContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .previewButton {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .previewButton:hover {
+    transform: scale(1.1); /* Slight button scale-up on hover */
+  }
+  
+  .play {
+    background-color: #e50914;
+    color: white;
+  }
+  
+  .play:hover {
+    background-color: #b00610;
+  }
+  
+  .info {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+  
+  .info:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  

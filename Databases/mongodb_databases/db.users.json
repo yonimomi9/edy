@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "username": "adminyona",
+      "password": "12345678",
+      "nameForDisplay": "AdminYona",
+      "profileImage": "/profilePictures/1738694525837-glassesprof.png",
+      "roles": {
+        "user": 2001,
+        "admin": 5000
+      },
+      "watchedMovies": [1, 2, 5, 6, 7, 8, 10, 17, 18]
+    },
+    {
+      "id": 2,
+      "username": "antony222",
+      "password": "12345678",
+      "nameForDisplay": "antonythegoat",
+      "profileImage": "/profilePictures/1738788125111-antony.jpg",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [3, 4, 14, 15, 16, 20]
+    },
+    {
+      "id": 3,
+      "username": "ofekofek123",
+      "password": "12345678",
+      "nameForDisplay": "ofekGoat",
+      "profileImage": "/profilePictures/rick.png",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [1, 4, 9, 10, 12, 19]
+    },
+    {
+      "id": 4,
+      "username": "sarah56",
+      "password": "mypassword",
+      "nameForDisplay": "Sarah K.",
+      "profileImage": "/profilePictures/sarah.jpg",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [5, 6, 8, 10, 13, 15, 16]
+    },
+    {
+      "id": 5,
+      "username": "johnny789",
+      "password": "securepass",
+      "nameForDisplay": "Johnny Bravo",
+      "profileImage": "/profilePictures/johnnybravo.jpg",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [3, 9, 12, 14, 19, 20]
+    },
+    {
+      "id": 6,
+      "username": "alex_dev",
+      "password": "devpass123",
+      "nameForDisplay": "Alex Developer",
+      "profileImage": "/profilePictures/people.png",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [2, 4, 6, 11, 18]
+    },
+    {
+      "id": 7,
+      "username": "naturelover",
+      "password": "ilovenature",
+      "nameForDisplay": "Nature Enthusiast",
+      "profileImage": "/profilePictures/nature.jpg",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [4, 7, 12, 13, 15, 16]
+    },
+    {
+      "id": 8,
+      "username": "MessiGOAT",
+      "password": "ilovemessi123",
+      "nameForDisplay": "Messi10",
+      "profileImage": "/profilePictures/messi.jpg",
+      "roles": {
+        "user": 2001
+      },
+      "watchedMovies": [3, 9, 14, 19]
+    }
+  ]
+  

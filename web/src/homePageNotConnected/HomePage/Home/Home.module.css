@@ -1,0 +1,60 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw; /* Ensures it spans the entire width of the screen */
+    background: radial-gradient(circle, #141414, #3b3b3b); /* Smooth gradient */
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px; /* Adds space above buttons */
+}
+
+button {
+    background: linear-gradient(135deg, #e50914, #b00710); /* Netflix red gradient */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 30px; /* Adjust button size */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #f40612, #d00f0f); /* Brighter gradient */
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+button:active {
+    transform: translateY(-2px); /* Reduced lift on click */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* Adjust shadow */
+}
+
+/* Animation for fading in text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,56 @@
+.recommended-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .movie-thumbnails-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible; /* Ensure content is not cropped */
+  }
+  
+  .movie-thumbnails {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    overflow: visible; /* Allow hover effects to overflow */
+  }
+  
+  .movie-thumbnails div:hover {
+    /* transform: scale(1.2); Scale up on hover */
+    z-index: 10; /* Bring the hovered item to the front */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  
+  
+  .thumbnail {
+    flex: 1;
+    max-width: 150px;
+    text-align: center;
+  }
+  
+  .thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .thumbnailPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    height: 150px;
+    border-radius: 8px;
+  }
+  

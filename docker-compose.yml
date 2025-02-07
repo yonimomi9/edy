@@ -1,0 +1,97 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.react
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./web:/usr/src/app/web
+    stdin_open: true
+    tty: true
+    environment:
+    - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+    - CONNECTION_STRING=${CONNECTION_STRING}
+    - PORT=${API_PORT}
+    networks:
+      - netflix_network
+
+
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.webserver
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    volumes:
+      - ./webServer:/usr/src/app
+      - ./Databases/data:/usr/src/app/data
+      - ./web/public:/usr/src/app/web/public:rw
+    stdin_open: true
+    tty: true
+    environment:
+      - NODE_ENV=development
+      - CONNECTION_STRING=${CONNECTION_STRING}
+      - PORT=${API_PORT}
+      - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+    depends_on:
+      - mongodb
+    networks:
+      - netflix_network
+
+
+  mongodb:
+    image: mongo:latest
+    container_name: netflix_p3-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - netflix_network
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.server
+    volumes:
+      - ./recommendServer:/usr/src/netflix_project/recommendServer
+      - ./Databases/data:/usr/src/netflix_project/data
+    stdin_open: true
+    tty: true
+    environment:
+      - RECOMMEND_PORT=${RECOMMEND_PORT}
+    command: ["${RECOMMEND_PORT}"]
+    networks:
+      - netflix_network
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.client
+    volumes:
+      - ./recommendServer:/usr/src/netflix_project/recommendServer
+    stdin_open: true
+    tty: true
+    command: ["server","${RECOMMEND_PORT}"]
+    networks:
+      - netflix_network
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.tests
+    volumes:
+      - ./recommendServer:/usr/src/netflix_project/recommendServer
+    stdin_open: true
+    tty: true
+    environment:
+      - RECOMMEND_PORT=${RECOMMEND_PORT}
+    networks:
+      - netflix_network
+
+volumes:
+  mongo_data:
+
+networks:
+  netflix_network:

@@ -1,0 +1,56 @@
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .searchForm {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .searchInput {
+    padding: 10px 15px; /* Slightly larger padding for better aesthetics */
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    outline: none;
+    width: 250px;
+    background-color: var(--menu-background-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+  }
+  
+  .searchInput:focus {
+    width: 300px; /* Expand width on focus */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); /* Glow effect */
+    background-color: #434242; /* Highlight background on focus */
+  }
+  
+  .searchButton {
+    padding: 10px 20px; /* Larger padding for a more prominent button */
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .searchButton:hover {
+    background-color: #e60000; /* Darker red on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .searchButton:active {
+    transform: translateY(1px); /* Slight depression on click */
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1); /* Return to original shadow */
+  }
+  

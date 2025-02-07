@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.label {
+  font-size: 18px;
+  color: #e50914; /* Netflix red */
+  font-weight: bold;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 16px;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #e50914;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.8);
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 120px; /* Reduced height to show fewer movies */
+  overflow-y: auto; /* Scrollable area for long lists */
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.categoryItem {
+  padding: 8px; /* Reduced padding for smaller items */
+  background-color: #1c1c1c;
+  color: white;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categoryItem:hover {
+  background-color: #e50914;
+  color: white;
+}
+
+.categoryItem.selected {
+  background-color: #e50914;
+  color: white;
+}
+
+.noResults {
+  color: white;
+  text-align: center;
+}
+
+.selectedCategories {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}

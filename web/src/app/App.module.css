@@ -1,0 +1,62 @@
+.app {
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh; /* Full height to avoid gaps */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced nicely */
+  align-items: center;
+}
+
+.loading {
+  font-size: 2rem; /* Larger text for better visibility */
+  font-weight: bold; /* Make the text stand out */
+  color: var(--accent-color, #ff4500); /* Use an accent color for loading state */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the loading state fills the viewport */
+  background: linear-gradient(135deg, var(--background-color-light), var(--background-color-dark)); /* Add a gradient background for effect */
+  animation: fadeIn 1.5s infinite; /* Optional animation */
+}
+
+/* Optional fade-in animation for a smooth effect */
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  background-color: var(--menu-background-color);
+  padding: 10px 0;
+  border-bottom: 2px solid var(--menu-border-color); /* Optional border */
+}
+
+.logoContainer {
+  position: absolute;
+  top: 10px; /* Adjust for spacing from the top */
+  left: 20px; /* Adjust for spacing from the left */
+  z-index: 100; /* Ensure it appears above other elements */
+}
+
+.logoNavbarContainer {
+  display: flex;
+  align-items: center; /* Align Logo and Navbar vertically */
+  padding: 0 20px;
+  background-color: var(--background-color); /* Match the theme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.logoContainer {
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  margin-right: 20px; /* Add space between the logo and the Navbar */
+}

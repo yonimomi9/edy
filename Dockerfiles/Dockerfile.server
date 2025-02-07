@@ -1,0 +1,35 @@
+# Base image
+FROM gcc:latest
+
+# Install dependencies
+RUN apt-get update && apt-get install -y cmake
+
+# Set up working directory
+WORKDIR /usr/src/netflix_project
+
+# Copy source and header files
+COPY ./recommendServer ./recommendServer
+
+# Copy the CMakeLists.txt
+COPY ./recommendServer/CMakeLists.txt .
+
+# Copy the data directory and ensure database.txt exists
+COPY ./Databases/data ./data
+RUN mkdir -p ./Databases/data && \
+    touch ./Databases/data/database.txt && \
+    chmod 666 ./Databases/data/database.txt
+
+# Copy the tests directory (conditionally include it in CMakeLists.txt)
+# COPY ./tests ./tests
+
+ENV RECOMMEND_PORT=${RECOMMEND_PORT}
+
+# Create build directory and build the project
+RUN mkdir build
+WORKDIR /usr/src/netflix_project/build
+RUN cmake .. ../recommendServer && make
+
+# Expose the server port
+
+# Command to run the server
+ENTRYPOINT ["./netflix"]

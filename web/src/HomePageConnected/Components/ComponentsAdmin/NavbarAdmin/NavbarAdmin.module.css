@@ -1,0 +1,56 @@
+.navbar {
+  position: fixed; /* Ensure it stays fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--menu-background-color);
+  border-bottom: 2px solid #ff0000;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between Logo and links */
+}
+
+
+.navbarLinks {
+  display: flex;
+  gap: 25px; /* Adjust the gap between links if needed */
+  margin-left: 10px; /* Increase this value to move the links further right */
+}
+
+.navbarLinks a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff0000;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbarLinks a:hover {
+  color: #ff4d4d;
+  text-shadow: 0px 4px 10px rgba(255, 77, 77, 0.8); /* Glow effect */
+  transform: translateY(-2px);
+}
+
+.navbarLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.navbarLinks a:hover::after {
+  width: 100%;
+}

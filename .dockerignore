@@ -1,0 +1,11 @@
+# Ignore node_modules in all directories
+node_modules/
+
+# Ignore build directories in web
+web/build/
+web/node_modules/
+# Ignore unnecessary directories in webServer
+webServer/node_modules/
+
+# Avoid ignoring critical files
+!.env

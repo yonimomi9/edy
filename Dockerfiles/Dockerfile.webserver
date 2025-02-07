@@ -1,0 +1,28 @@
+# Use Node.js image
+FROM node:16
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Set environment variables
+ENV NODE_ENV=local
+ENV CONNECTION_STRING=${CONNECTION_STRING}
+ENV API_PORT=${API_PORT}
+
+# Copy package.json and package-lock.json first to leverage caching
+COPY ./webServer/package*.json ./
+
+# Copy .env files and other configuration files
+COPY ./webServer/config/ ./config/
+
+# Install dependencies
+RUN npm install && npm list
+
+# Copy the rest of the application files
+COPY ./webServer/ ./
+
+# Expose the application port
+EXPOSE ${API_PORT}
+
+# Command to start the application
+CMD ["sh", "-c", "chmod -R 777 /usr/src/app/web/public && npm start"]

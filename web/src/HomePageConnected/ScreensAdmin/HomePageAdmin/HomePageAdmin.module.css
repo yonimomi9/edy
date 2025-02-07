@@ -1,0 +1,82 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.previewContainer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.previewContainer .previewMovie {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: start;
+  justify-content: left;
+}
+
+
+.moviesButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.moviesButton {
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.moviesButton:hover {
+  background-color: #b00710;
+}
+
+.loadingMessage {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 100px;
+  animation: fadeInOut 2s infinite;
+}
+
+/* Add a subtle fade-in and fade-out animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

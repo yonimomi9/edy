@@ -1,0 +1,98 @@
+.userIconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.userIcon:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  background-color: rgba(255, 0, 0, 0.1); /* Add a subtle red background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.userIcon:hover .userAvatar {
+  border: 2px solid #ff0000; /* Red border on hover */
+}
+
+.userIconClicked {
+  transform: scale(1.2);
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.greetingText {
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0;
+  transform: translateX(-10px); /* Slide effect for "Hello! User" */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.userIcon:hover .greetingText {
+  opacity: 1;
+  transform: translateX(0); /* Reset slide effect */
+}
+
+.userMenu {
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  right: 0;
+  background-color: var(--menu-background-color);
+  color: var(--menu-text-color);
+  border: 1px solid var(--menu-border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 150px;
+  opacity: 0;
+  transform: translateY(-10px); /* Slide effect */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in and slide */
+  pointer-events: none;
+}
+
+.userMenuVisible {
+  opacity: 1;
+  transform: translateY(0); /* Reset slide */
+  pointer-events: auto; /* Enable interaction */
+}
+
+.userMenu ul {
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menuItem:hover {
+  background: var(--menu-hover-color);
+}
+
+.themeToggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 14px; /* Same as other menu items */
+  gap: 10px; /* Add space between the text and switch */
+  white-space: nowrap; /* Prevent text wrapping */
+}

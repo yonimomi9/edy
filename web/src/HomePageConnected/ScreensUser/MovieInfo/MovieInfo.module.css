@@ -1,0 +1,122 @@
+.movieInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.topSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.previewSection {
+  flex: 2;
+  margin-right: 20px;
+}
+
+
+.detailsSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a); /* Dark gray gradient */
+  border-radius: 16px;
+  border: 2px solid #d20000; /* Red border to match theme */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Added margin to move it lower */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detailsSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.detailsSection h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ff0000; /* Red color for the title */
+  margin-bottom: 1rem;
+  text-transform: none;
+}
+
+.detailsSection h2 {
+  font-size: 1.6rem;
+  color: #e0e0e0; /* Lighter gray for subtitles */
+  margin-bottom: 1.5rem;
+  text-transform: bold;
+  letter-spacing: 1.2px;
+}
+
+.detailsSection ul {
+  list-style: none; /* Remove default bullets */
+  margin-left: 0; /* Reset margin */
+  padding: 0; /* Remove padding */
+}
+
+.detailsSection ul li {
+  position: relative;
+  font-size: 1.2rem; /* Slightly larger font for better readability */
+  color: #f0f0f0; /* Light text color for better contrast */
+  margin-bottom: 0.8rem; /* Increase spacing between items */
+  padding-left: 25px; /* Add space for custom bullet */
+  transition: color 0.2s ease;
+}
+
+.detailsSection ul li::before {
+  content: '•'; /* Custom bullet */
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem; /* Slightly larger bullet */
+  color: #d20000; /* Red color matching the theme */
+  line-height: 1; /* Align bullet with text */
+  top: 0; /* Center vertically */
+}
+
+.detailsSection ul li:hover {
+  color: #ff0000; /* Lighter red on hover */
+}
+
+
+.detailsSection li {
+  font-size: 1.2rem;
+  color: #f0f0f0; /* Slightly lighter text for contrast */
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.detailsSection li:hover {
+  color: hsl(0, 100%, 60%); /* Lighter red for hover effect */
+}
+
+.detailsSection {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.bottomSection {
+  margin-top: 30px;
+}
+
+.recommendedMovies {
+  text-align: center;
+}

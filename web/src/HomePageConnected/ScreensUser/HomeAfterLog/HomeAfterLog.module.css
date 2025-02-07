@@ -1,0 +1,84 @@
+.loadingText {
+  font-size: 1.5rem; /* Slightly larger font size */
+  font-weight: bold; /* Make it stand out */
+  color: #e50914; /* Netflix-like red */
+  text-align: center; /* Center the text horizontally */
+  padding: 20px; /* Add some space around the text */
+  margin: 0 auto; /* Center the element on the page */
+  animation: fadeInOut 1.5s infinite; /* Add a smooth fade-in-out animation */
+}
+
+/* Optional fade-in-out animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.previewContainer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.previewContainer .previewMovie {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: start;
+  justify-content: left;
+}
+
+
+.moviesButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.moviesButton {
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.moviesButton:hover {
+  background-color: #b00710;
+}

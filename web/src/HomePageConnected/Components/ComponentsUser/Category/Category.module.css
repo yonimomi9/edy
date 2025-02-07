@@ -1,0 +1,71 @@
+.category-container {
+  position: relative; /* Ensures thumbnails respect this container */
+  padding: 20px 40px; /* Add horizontal padding for alignment */
+  border-radius: 12px;
+  background-color: var(--background-color);
+  border: 3px solid var(--category-border-color); /* Dynamic border color */
+  overflow: visible; /* Allow thumbnails to scale outside the container */
+  margin-bottom: 30px; /* More spacing between categories */
+  z-index: 0; /* Default layer */
+}
+
+.category-title {
+  font-size: 22px; /* Slightly larger text */
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.movie-thumbnails-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.movie-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow: visible; /* Prevent clipping of thumbnails */
+  position: relative; /* Base for z-index adjustments */
+}
+
+.movie-thumbnail {
+  position: relative;
+  z-index: 1; /* Default z-index */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-thumbnail:hover {
+  z-index: 10; /* Bring hovered thumbnail to the front */
+  transform: scale(1.4); /* Scale effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Elevated shadow */
+}
+
+.arrowButton {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  opacity: 0.8; /* Adjusted for a smoother hover effect */
+}
+
+.arrowButton:hover {
+  transform: scale(1.1); /* Zoom slightly */
+  opacity: 1; /* Slightly increase opacity on hover */
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}

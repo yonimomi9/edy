@@ -1,0 +1,45 @@
+[
+    {
+      "_id": { "$oid": "67a2ca69d667a4c99183ca6c" },
+      "name": "Fun",
+      "promoted": false,
+      "movies": [1, 2, 17, 19]
+    },
+    {
+      "_id": { "$oid": "67a2ca6dd667a4c99183ca6f" },
+      "name": "Nature",
+      "promoted": true,
+      "movies": [2, 4, 7, 12, 13, 14, 15, 16, 20]
+    },
+    {
+      "_id": { "$oid": "67a2cacfd667a4c99183ca75" },
+      "name": "Sports",
+      "promoted": false,
+      "movies": [3, 9, 14, 19]
+    },
+    {
+      "_id": { "$oid": "67a2cad3d667a4c99183ca78" },
+      "name": "Intelligence",
+      "promoted": true,
+      "movies": [5, 6, 7, 8, 10, 11, 18]
+    },
+    {
+      "_id": { "$oid": "67a2cadcd667a4c99183ca7b" },
+      "name": "Funny",
+      "promoted": true,
+      "movies": [1, 2, 6, 9, 17, 19]
+    },
+    {
+      "_id": { "$oid": "67a2cae3d667a4c99183ca7e" },
+      "name": "Sad",
+      "promoted": false,
+      "movies": [4]
+    },
+    {
+      "_id": { "$oid": "67a373a5fd32d7db8f4708aa" },
+      "name": "Tension",
+      "promoted": false,
+      "movies": [10, 20]
+    }
+  ]
+  

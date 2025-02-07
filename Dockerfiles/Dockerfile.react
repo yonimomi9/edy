@@ -1,0 +1,29 @@
+# Use the Node.js base image
+FROM node:18-alpine
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY web/package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the entire web directory into the container
+COPY web ./web
+
+# Change to the 'web' directory
+WORKDIR /usr/src/app/web
+
+# Install additional dependencies
+RUN npm install jsonwebtoken cookie-parser multer web-vitals react-icons
+
+# Build the React app
+RUN npm run build
+
+# Expose the application port
+EXPOSE 8000
+
+# Start the React app (using serve for production)
+ENTRYPOINT ["npm", "start"]

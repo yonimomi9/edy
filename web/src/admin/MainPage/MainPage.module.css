@@ -1,0 +1,21 @@
+.pageContainer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Start alignment to control vertical spacing */
+    height: 100vh; /* Full viewport height */
+    background-color: #141414; /* Netflix dark theme */
+    color: white;
+    padding-top: 100px; /* Push the container lower */
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between components */
+    width: 400px; /* Fixed width */
+    padding: 40px;
+    background-color: #2c2c2c; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+  }
+  

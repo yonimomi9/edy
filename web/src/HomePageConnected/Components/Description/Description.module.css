@@ -1,0 +1,113 @@
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--bg-color-light);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.descriptionContainer:hover {
+  transform: scale(1.02); /* Subtle hover effect */
+}
+
+.descriptionContainer h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.descriptionContainer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Space between items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+}
+
+.descriptionContainer li {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: var(--card-bg-color);
+  color: var(--text-secondary);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.descriptionContainer li:hover {
+  background-color: var(--highlight-color);
+  color: rgb(255, 0, 0);
+}
+
+
+.descriptionContainer h2 {
+  font-size: 1.6rem;
+  text-align: left;
+  color: var(--text-color-light);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--highlight-color);
+  padding-bottom: 5px;
+  width: 100%;
+  
+  
+}
+.descriptionContainer h2:hover {
+  color: #ff4d4d;
+  text-shadow: 0px 4px 10px rgba(255, 77, 77, 0.8); /* Glow effect */
+  transform: translateY(-2px);
+}
+
+.descriptionContainer h2::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.descriptionContainer li:before {
+  content: ''; /* Remove emoji */
+  margin-right: 8px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--highlight-color); /* Use CSS variable for color */
+}
+
+
+/* Light Theme Variables */
+.light-theme {
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #f8f8f8;
+  --highlight-color: #e50914;
+  --card-bg-color: #f4f4f4;
+  --divider-color: #ddd;
+  --text-color-light: #222;
+  --text-secondary: #444;
+  --accent-color: #e50914;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+  --bg-color-light: #1f1f1f;
+  --bg-color-dark: #2a2a2a;
+  --highlight-color: #e50914;
+  --card-bg-color: #333;
+  --divider-color: #444;
+  --text-color-light: #ddd;
+  --text-secondary: #bbb;
+  --accent-color: #ff5733; /* Soft orange contrast */
+}
